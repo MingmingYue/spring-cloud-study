@@ -5,7 +5,7 @@ server:
 eureka:
   instance:
     # 指定该Eureka实例的主机名
-    hostname: localhost
+    hostname: 10.10.10.77
     preferIpAddress: true
   server:
     # 关闭自我保护机制 不推荐
