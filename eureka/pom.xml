@@ -9,9 +9,8 @@
         <version>1.0.0.RELEASE</version>
     </parent>
 
-    <groupId>com.ming</groupId>
     <artifactId>eureka</artifactId>
-    <version>${ming.version}</version>
+    <version>1.0.0.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>eureka</name>
