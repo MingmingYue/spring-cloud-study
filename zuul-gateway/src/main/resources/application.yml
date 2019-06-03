@@ -1,0 +1,20 @@
+server:
+  port: 9030
+spring:
+  application:
+    name: zuul-gateway
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # 暴露所有服务监控端口，也可以只暴露 hystrix.stream端口
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  name: '@project.artifactId@'
+  parent: '@project.parent.artifactId@'
+  description: '@project.description@'
+  version: '@project.version@'

@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
+ * @author: Ming
  * Created by 2019-06-03
  */
 @RefreshScope
