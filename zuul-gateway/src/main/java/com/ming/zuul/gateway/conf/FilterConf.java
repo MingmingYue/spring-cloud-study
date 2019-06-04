@@ -1,5 +1,6 @@
 package com.ming.zuul.gateway.conf;
 
+import com.ming.zuul.gateway.filter.pre.UrlCacheProFilter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
