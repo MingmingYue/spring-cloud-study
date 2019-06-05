@@ -1,6 +1,5 @@
 package com.ming.zuul.gateway.filter.pre;
 
-import com.ming.common.utils.BlankUtil;
 import com.ming.zuul.gateway.util.RequestParamUtil;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
