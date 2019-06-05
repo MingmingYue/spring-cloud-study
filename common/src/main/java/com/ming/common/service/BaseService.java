@@ -27,12 +27,10 @@ public interface BaseService<T> {
      */
     List<T> selectList(T entity);
 
-
     /**
      * 获取所有对象
      */
     List<T> selectListAll();
-
 
     /**
      * 查询总记录数
@@ -49,7 +47,6 @@ public interface BaseService<T> {
      */
     void insert(T entity);
 
-
     /**
      * 插入 不插入null字段
      */
@@ -65,12 +62,10 @@ public interface BaseService<T> {
      */
     void deleteById(Object id);
 
-
     /**
      * 根据id更新
      */
     void updateById(T entity);
-
 
     /**
      * 不update null
@@ -81,7 +76,6 @@ public interface BaseService<T> {
      * 根据ID集合批量删除
      */
 //    void deleteBatchByIds(List<Object> ids);
-
 
     /**
      * 批量更新
