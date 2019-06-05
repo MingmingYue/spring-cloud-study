@@ -1,4 +1,4 @@
-package com.ming.common.util.util;
+package com.ming.common.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
@@ -9,6 +9,7 @@ import org.springframework.util.Assert;
 import java.lang.reflect.*;
 
 /**
+ * 反射工具类
  * Created by 2019-06-05
  */
 @SuppressWarnings("rawtypes")

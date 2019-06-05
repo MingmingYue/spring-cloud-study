@@ -1,8 +1,10 @@
-package com.ming.common.util.biz;
+package com.ming.common.biz;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.ming.common.util.msg.TableResultResponse;
+import com.ming.common.util.Query;
+import com.ming.common.msg.TableResultResponse;
+import com.ming.common.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
@@ -46,12 +48,12 @@ public abstract class BaseBiz<M extends Mapper<T>, T> {
     public int selectCount(T entity) { return (mapper.selectCount(entity)); }
 
     public void insert(T entity) {
-        EntityUtils.setCreatAndUpdatInfo(entity);
+        EntityUtils.setCreatAndUpdateInfo(entity);
         mapper.insert(entity);
     }
 
     public void insertSelective(T entity) {
-        EntityUtils.setCreatAndUpdatInfo(entity);
+        EntityUtils.setCreatAndUpdateInfo(entity);
         mapper.insertSelective(entity);
     }
 

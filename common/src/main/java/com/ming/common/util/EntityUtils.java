@@ -1,5 +1,8 @@
-package com.ming.common.util.util;
+package com.ming.common.util;
 
+import com.ming.common.context.BaseContextHandler;
+import com.ming.common.entity.RequestInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -22,23 +25,14 @@ public class EntityUtils {
      * 快速将bean的crtUser、crtHost、crtTime附上相关值
      */
     public static <T> void setCreateInfo(T entity) {
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-        String hostIp = "";
-        String name = "";
-        String id = "";
-        if (request != null) {
-            hostIp = String.valueOf(request.getHeader("userHost"));
-            name = String.valueOf(request.getHeader("userName"));
-            name = URLDecoder.decode(name);
-            id = String.valueOf(request.getHeader("userId"));
-        }
+        RequestInfo requestInfo = getInfo();
         // 默认属性
         String[] fields = {"crtName", "crtUser", "crtHost", "crtTime"};
         Field field = ReflectionUtils.getAccessibleField(entity, "crtTime");
         // 默认值
         Object[] value = null;
         if (field != null && field.getType().equals(Date.class)) {
-            value = new Object[]{name, id, hostIp, new Date()};
+            value = new Object[]{requestInfo.getName(), requestInfo.getId(), requestInfo.getHostIp(), new Date()};
         }
         // 填充默认属性值
         setDefaultValues(entity, fields, value);
@@ -48,6 +42,19 @@ public class EntityUtils {
      * 快速将bean的updUser、updHost、updTime附上相关值
      */
     public static <T> void setUpdatedInfo(T entity) {
+        RequestInfo requestInfo = getInfo();
+        // 默认属性
+        String[] fields = {"updName", "updUser", "updHost", "updTime"};
+        Field field = ReflectionUtils.getAccessibleField(entity, "updTime");
+        Object[] value = null;
+        if (field != null && field.getType().equals(Date.class)) {
+            value = new Object[]{requestInfo.getName(), requestInfo.getId(), requestInfo.getHostIp(), new Date()};
+        }
+        // 填充默认属性值
+        setDefaultValues(entity, fields, value);
+    }
+
+    private static RequestInfo getInfo() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         String hostIp = "";
         String name = "";
@@ -58,15 +65,13 @@ public class EntityUtils {
             name = URLDecoder.decode(name);
             id = String.valueOf(request.getHeader("userId"));
         }
-        // 默认属性
-        String[] fields = {"updName", "updUser", "updHost", "updTime"};
-        Field field = ReflectionUtils.getAccessibleField(entity, "updTime");
-        Object[] value = null;
-        if (field != null && field.getType().equals(Date.class)) {
-            value = new Object[]{name, id, hostIp, new Date()};
+        if (StringUtils.isBlank(name)) {
+            name = BaseContextHandler.getUsername();
         }
-        // 填充默认属性值
-        setDefaultValues(entity, fields, value);
+        if (StringUtils.isBlank(id)) {
+            id = BaseContextHandler.getUserID();
+        }
+        return RequestInfo.builder().hostIp(hostIp).id(id).name(name).build();
     }
 
     /**

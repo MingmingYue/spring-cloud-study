@@ -1,4 +1,4 @@
-package com.ming.common.util.msg;
+package com.ming.common.msg;
 
 import java.util.List;
 
