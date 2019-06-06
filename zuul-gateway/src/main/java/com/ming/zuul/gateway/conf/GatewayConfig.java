@@ -1,6 +1,6 @@
 package com.ming.zuul.gateway.conf;
 
-import com.ming.zuul.gateway.RequestBodyRoutePredicateFactory;
+import com.ming.zuul.gateway.handler.RequestBodyRoutePredicateFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

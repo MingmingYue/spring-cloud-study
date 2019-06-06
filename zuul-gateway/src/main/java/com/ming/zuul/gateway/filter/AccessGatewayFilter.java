@@ -11,7 +11,7 @@ import com.ming.auth.common.utils.jwt.IJWTInfo;
 import com.ming.common.context.BaseContextHandler;
 import com.ming.common.msg.BaseResponse;
 import com.ming.common.msg.auth.TokenForbiddenResponse;
-import com.ming.zuul.gateway.RequestBodyRoutePredicateFactory;
+import com.ming.zuul.gateway.handler.RequestBodyRoutePredicateFactory;
 import com.ming.zuul.gateway.feign.ILogService;
 import com.ming.zuul.gateway.feign.IUserService;
 import com.ming.zuul.gateway.utils.DBLog;

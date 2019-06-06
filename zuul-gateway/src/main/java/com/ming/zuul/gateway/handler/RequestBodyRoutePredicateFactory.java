@@ -1,4 +1,4 @@
-package com.ming.zuul.gateway;
+package com.ming.zuul.gateway.handler;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,6 +19,8 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 import java.util.function.Predicate;
 
+import static org.springframework.cloud.gateway.filter.AdaptCachedBodyGlobalFilter.CACHED_REQUEST_BODY_KEY;
+
 /**
  * Created by 2019-06-06
  */
@@ -27,6 +29,7 @@ public class RequestBodyRoutePredicateFactory
     protected static final Log LOGGER = LogFactory.getLog(ReadBodyPredicateFactory.class);
     private static final List<HttpMessageReader<?>> messageReaders = HandlerStrategies.withDefaults().messageReaders();
     public static final String REQUEST_BODY_ATTR = "requestBodyAttr";
+
     public RequestBodyRoutePredicateFactory() {
         super(Config.class);
     }
@@ -67,7 +70,6 @@ public class RequestBodyRoutePredicateFactory
                                     })
                                     .map(objectValue -> true);
                         });
-
             }
         };
     }
