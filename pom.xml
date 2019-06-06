@@ -31,6 +31,8 @@
         <module>common</module>
         <module>db</module>
         <module>config-server</module>
+        <module>auth</module>
+        <module>modules</module>
     </modules>
 
     <dependencies>
