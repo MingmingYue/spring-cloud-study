@@ -1,8 +1,12 @@
 package com.ming.zuul.gateway.utils;
 
+import com.ming.api.vo.log.LogInfo;
+import com.ming.zuul.gateway.feign.ILogService;
 import lombok.extern.log4j.Log4j2;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**

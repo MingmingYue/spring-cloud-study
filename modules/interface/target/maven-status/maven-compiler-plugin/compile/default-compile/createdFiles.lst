@@ -1,0 +1,4 @@
+com/ming/api/vo/search/IndexObject.class
+com/ming/api/vo/user/UserInfo.class
+com/ming/api/vo/log/LogInfo.class
+com/ming/api/vo/authority/PermissionInfo.class

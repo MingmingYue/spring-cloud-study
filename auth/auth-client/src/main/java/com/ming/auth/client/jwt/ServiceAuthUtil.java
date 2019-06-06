@@ -1,7 +1,7 @@
 package com.ming.auth.client.jwt;
 
 import com.ming.auth.client.config.ServiceAuthConfig;
-import com.ming.auth.client.fegin.ServiceAuthFeign;
+import com.ming.auth.client.feign.ServiceAuthFeign;
 import com.ming.auth.common.utils.jwt.IJWTInfo;
 import com.ming.auth.common.utils.jwt.JWTHelper;
 import com.ming.common.exception.auth.ClientTokenException;

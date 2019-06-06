@@ -1,7 +1,6 @@
 com/ming/auth/client/EnableAuthClient.class
 com/ming/auth/client/exception/JwtIllegalArgumentException.class
 com/ming/auth/client/config/ServiceAuthConfig.class
-com/ming/auth/client/fegin/ServiceAuthFeign.class
 com/ming/auth/client/exception/JwtTokenExpiredException.class
 com/ming/auth/client/config/UserAuthConfig.class
 com/ming/auth/client/config/FeignOkHttpConfig.class
@@ -14,4 +13,5 @@ com/ming/auth/client/interceptor/UserAuthRestInterceptor.class
 com/ming/auth/client/interceptor/ServiceAuthRestInterceptor.class
 com/ming/auth/client/jwt/ServiceAuthUtil.class
 com/ming/auth/client/configuration/AutoConfiguration.class
+com/ming/auth/client/feign/ServiceAuthFeign.class
 com/ming/auth/client/annotation/IgnoreUserToken.class

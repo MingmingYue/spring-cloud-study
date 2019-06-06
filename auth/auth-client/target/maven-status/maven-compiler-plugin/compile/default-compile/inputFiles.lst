@@ -9,7 +9,7 @@
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/exception/JwtTokenExpiredException.java
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/interceptor/ServiceAuthRestInterceptor.java
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/interceptor/OkHttpTokenInterceptor.java
-/Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/fegin/ServiceAuthFeign.java
+/Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/feign/ServiceAuthFeign.java
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/runner/AuthClientRunner.java
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/config/ServiceAuthConfig.java
 /Users/zmm/Documents/study/spring-cloud-study/auth/auth-client/src/main/java/com/ming/auth/client/config/UserAuthConfig.java

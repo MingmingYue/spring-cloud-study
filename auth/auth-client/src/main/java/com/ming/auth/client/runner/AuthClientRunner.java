@@ -2,7 +2,7 @@ package com.ming.auth.client.runner;
 
 import com.ming.auth.client.config.ServiceAuthConfig;
 import com.ming.auth.client.config.UserAuthConfig;
-import com.ming.auth.client.fegin.ServiceAuthFeign;
+import com.ming.auth.client.feign.ServiceAuthFeign;
 import com.ming.common.msg.BaseResponse;
 import com.ming.common.msg.ObjectRestResponse;
 import lombok.extern.slf4j.Slf4j;

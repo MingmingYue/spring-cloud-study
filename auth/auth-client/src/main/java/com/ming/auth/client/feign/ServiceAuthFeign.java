@@ -1,4 +1,4 @@
-package com.ming.auth.client.fegin;
+package com.ming.auth.client.feign;
 
 import com.ming.common.msg.ObjectRestResponse;
 import org.springframework.cloud.openfeign.FeignClient;
