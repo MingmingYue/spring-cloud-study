@@ -1,0 +1,4 @@
+com/ming/tcc/transation/api/TransactionContext.class
+com/ming/tcc/transation/api/UuidUtils.class
+com/ming/tcc/transation/api/TransactionXid.class
+com/ming/tcc/transation/api/TransactionStatus.class
