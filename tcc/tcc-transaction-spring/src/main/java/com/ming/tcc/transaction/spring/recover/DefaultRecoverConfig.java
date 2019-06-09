@@ -1,11 +1,13 @@
 package com.ming.tcc.transaction.spring.recover;
 
 import com.ming.tcc.transaction.recover.RecoverConfig;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * 默认事务恢复配置.
  * Create on 2019-06-08.
  */
+@Configuration
 public class DefaultRecoverConfig implements RecoverConfig {
 
     public static final RecoverConfig INSTANCE = new DefaultRecoverConfig();

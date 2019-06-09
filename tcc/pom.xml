@@ -16,6 +16,9 @@
         <module>tcc-transaction-api</module>
         <module>tcc-transaction-core</module>
         <module>tcc-transaction-spring</module>
+        <module>tcc-transaction-order</module>
+        <module>tcc-transaction-redpacket</module>
+        <module>tcc-transaction-capital</module>
     </modules>
 
 

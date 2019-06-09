@@ -37,7 +37,6 @@ public class TccTransactionContextAspect implements Ordered {
      */
     @Pointcut("execution(public * *(com.ming.tcc.transaction,..))||@annotation(com.ming.tcc.transaction.Compensable)")
     public void transactionContextCall() {
-
     }
 
     /**
